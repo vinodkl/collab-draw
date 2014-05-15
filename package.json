@@ -1,0 +1,24 @@
+{
+  "name": "collab-draw",
+  "version": "0.0.1",
+  "description": "Draw something and everyone connected to the app sees the same.",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm run dev",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "colla",
+    "paint"
+  ],
+  "author": "vinodkl",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "express": "~4.2.0",
+    "socket.io": "~0.9.16"
+  },
+  "devDependencies": {
+    "ejs": "~1.0.0",
+    "gulp": "~3.6.2"
+  }
+}

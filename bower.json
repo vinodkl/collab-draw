@@ -1,0 +1,26 @@
+{
+  "name": "collab-draw",
+  "version": "0.0.1",
+  "description": "js libraries for collab-paint",
+  "keywords": [
+    "collab",
+    "draw"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "js/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-router": "~0.2.10",
+    "angularjs": "*",
+    "jquery": "~2.1.1",
+    "raphael": "~2.1.2",
+    "json2": "*"
+  }
+}
