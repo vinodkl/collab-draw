@@ -1,5 +1,5 @@
 var collabPaintApp = angular.module("collabDraw", ['ui.router']);
-var socket = io.connect('http://localhost:8080');
+var socket = io.connect('http://localhost:8089');
 
 collabPaintApp.config(function($stateProvider) {
 	$stateProvider
@@ -41,15 +41,13 @@ collabPaintApp.directive('drawarea', function() {
 		replace: true,
 		link: function(element, scope) {
 			var sketchpad = Raphael.sketchpad("editor", {
-				width: 400,
-				height: 400,
+				width: $('.draw-container').width(),
+				height: $(document).height() - 40,
 				editing: true
 			});
 
 			sketchpad.change(function() {
-				console.debug('jere');
 				if(sketchpad.startDraw) {
-					console.debug('drwan');
 					socket.emit('draw', {drawJson: (sketchpad.json())});
 				}
 			});
