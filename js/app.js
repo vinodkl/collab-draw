@@ -1,5 +1,5 @@
 var collabPaintApp = angular.module("collabDraw", ['ui.router']);
-var socket = io.connect('http://localhost:8089');
+var socket = io.connect('http://localhost');
 
 collabPaintApp.config(function($stateProvider) {
 	$stateProvider
@@ -33,7 +33,7 @@ collabPaintApp.controller("LoginCtrl", function($rootScope, $scope, $state) {
 collabPaintApp.controller("DrawPageCtrl", function($rootScope, $scope) {
 	// $scope.onlineUsers = $rootScope.users;
 	// console.debug($scope.onlineUsers);
-	
+
 });
 
 collabPaintApp.directive('drawarea', function() {
